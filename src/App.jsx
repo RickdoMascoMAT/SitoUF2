@@ -1,6 +1,6 @@
 import logo from './assets/erasebg-transformed.png'
-import personalTrainingImg from './assets/personal-training.jpg'
-import nutritionImg from './assets/nutrition.jpg'
+import personalTrainingImg from './assets/personal-training-downscaled.png'
+import nutritionImg from './assets/nutrition-downscaled.png'
 import { useState } from 'react'
 import './App.css'
 
@@ -105,7 +105,26 @@ function App() {
         <div className="signup-form-container">
           <h2>Iscriviti Ora</h2>
           <div className="price-indicator">
-            <p>Prezzo totale: <span className="price-display">€{(discountedPrice * parseInt(selectedDuration)).toFixed(2)}</span> {selectedDuration !== '1' && <span className="price-original">€{(basePrice * parseInt(selectedDuration)).toFixed(2)}</span>} - Mensile: <span className="price-display">€{discountedPrice.toFixed(2)}</span> {selectedDuration !== '1' && <span className="price-original">€{basePrice.toFixed(2)}</span>}</p>
+            <p style={{marginBottom: '1rem', fontSize: '1.2rem', fontWeight: '600'}}>Riepilogo Prezzo</p>
+            {selectedDuration === '1' ? (
+              <p style={{marginBottom: '0'}}>
+                <span style={{display: 'inline-block', minWidth: '140px'}}>Prezzo Mensile:</span>
+                <span className="price-display">€{discountedPrice.toFixed(2)}</span>
+              </p>
+            ) : (
+              <>
+                <p style={{marginBottom: '0.5rem'}}>
+                  <span style={{display: 'inline-block', minWidth: '140px'}}>Totale Iscrizione:</span>
+                  <span className="price-display">€{(discountedPrice * parseInt(selectedDuration)).toFixed(2)}</span>
+                  <span className="price-original" style={{marginLeft: '0.5rem'}}>€{(basePrice * parseInt(selectedDuration)).toFixed(2)}</span>
+                </p>
+                <p style={{marginBottom: '0'}}>
+                  <span style={{display: 'inline-block', minWidth: '140px'}}>Prezzo Mensile:</span>
+                  <span className="price-display">€{discountedPrice.toFixed(2)}</span>
+                  <span className="price-original" style={{marginLeft: '0.5rem'}}>€{basePrice.toFixed(2)}</span>
+                </p>
+              </>
+            )}
           </div>
           <form className="signup-form">
             <input type="text" placeholder="Nome" required />
