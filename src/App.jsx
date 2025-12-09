@@ -50,12 +50,12 @@ function App() {
         <h2>I Nostri Servizi</h2>
         <div className="service-cards">
           <div className="card">
-            <img src={personalTrainingImg} alt="Preparazione alle Gare" style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px', marginBottom: '1rem'}} />
+            <img src={personalTrainingImg} alt="Preparazione alle Gare" />
             <h3>Preparazione alle Gare</h3>
             <p>Allenamenti specifici per powerlifting con personale preparato per aiutarti a metterti in gioco e competere. Strutture e attrezzature adeguate per atleti di tutte le età.</p>
           </div>
           <div className="card">
-            <img src={nutritionImg} alt="Palestra anche a tavola" style={{width: '100%', height: '200px', objectFit: 'cover', borderRadius: '10px', marginBottom: '1rem'}} />
+            <img src={nutritionImg} alt="Palestra anche a tavola" />
             <h3>Palestra anche a tavola</h3>
             <p>Cucina con professionista che segue l'ambito alimentare, strutturando diete sane ed equilibrate apportate ai tuoi obiettivi sportivi.</p>
           </div>
@@ -105,7 +105,7 @@ function App() {
         <div className="signup-form-container">
           <h2>Iscriviti Ora</h2>
           <div className="price-indicator">
-            <p>Prezzo totale: <span className="price-display">€{(discountedPrice * parseInt(selectedDuration)).toFixed(2)}</span> <span className="price-original">€{(basePrice * parseInt(selectedDuration)).toFixed(2)}</span> - Mensile: <span className="price-display">€{discountedPrice.toFixed(2)}</span> <span className="price-original">€{basePrice.toFixed(2)}</span></p>
+            <p>Prezzo totale: <span className="price-display">€{(discountedPrice * parseInt(selectedDuration)).toFixed(2)}</span> {selectedDuration !== '1' && <span className="price-original">€{(basePrice * parseInt(selectedDuration)).toFixed(2)}</span>} - Mensile: <span className="price-display">€{discountedPrice.toFixed(2)}</span> {selectedDuration !== '1' && <span className="price-original">€{basePrice.toFixed(2)}</span>}</p>
           </div>
           <form className="signup-form">
             <input type="text" placeholder="Nome" required />
@@ -134,54 +134,54 @@ function App() {
         <h2>Testimonial</h2>
         <div className="testimonials-container">
           <div className="testimonials-scroll">
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Questa palestra ha cambiato la mia vita! Personale fantastico e risultati incredibili."</p>
-              <p>- Maria R.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Questa palestra ha cambiato la mia vita! Personale fantastico e risultati incredibili."</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Maria R.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"L'allenamento personalizzato mi ha aiutato a raggiungere i miei obiettivi in modo sicuro e efficace."</p>
-              <p>- Luca T.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"L'allenamento personalizzato mi ha aiutato a raggiungere i miei obiettivi in modo sicuro e efficace."</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Luca T.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Consigli nutrizionali eccellenti. Raccomando a tutti!"</p>
-              <p>- Sofia M.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Consigli nutrizionali eccellenti. Raccomando a tutti!"</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Sofia M.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Ambiente motivante e attrezzature di qualità. Sono diventato più forte che mai!"</p>
-              <p>- Giovanni P.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Ambiente motivante e attrezzature di qualità. Sono diventato più forte che mai!"</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Giovanni P.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"La dieta personalizzata ha fatto la differenza. Mi sento energico e in forma."</p>
-              <p>- Elena S.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"La dieta personalizzata ha fatto la differenza. Mi sento energico e in forma."</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Elena S.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Preparazione perfetta per le gare. Grazie al team per il supporto!"</p>
-              <p>- Marco L.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Preparazione perfetta per le gare. Grazie al team per il supporto!"</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Marco L.</p>
             </div>
             {/* Duplicate for seamless scroll */}
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Questa palestra ha cambiato la mia vita! Personale fantastico e risultati incredibili."</p>
-              <p>- Maria R.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Questa palestra ha cambiato la mia vita! Personale fantastico e risultati incredibili."</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Maria R.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"L'allenamento personalizzato mi ha aiutato a raggiungere i miei obiettivi in modo sicuro e efficace."</p>
-              <p>- Luca T.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"L'allenamento personalizzato mi ha aiutato a raggiungere i miei obiettivi in modo sicuro e efficace."</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Luca T.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Consigli nutrizionali eccellenti. Raccomando a tutti!"</p>
-              <p>- Sofia M.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Consigli nutrizionali eccellenti. Raccomando a tutti!"</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Sofia M.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Ambiente motivante e attrezzature di qualità. Sono diventato più forte che mai!"</p>
-              <p>- Giovanni P.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Ambiente motivante e attrezzature di qualità. Sono diventato più forte che mai!"</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Giovanni P.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"La dieta personalizzata ha fatto la differenza. Mi sento energico e in forma."</p>
-              <p>- Elena S.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"La dieta personalizzata ha fatto la differenza. Mi sento energico e in forma."</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Elena S.</p>
             </div>
-            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '10px', width: '250px', flexShrink: 0}}>
-              <p>"Preparazione perfetta per le gare. Grazie al team per il supporto!"</p>
-              <p>- Marco L.</p>
+            <div style={{backgroundColor: 'rgba(255,255,255,0.1)', padding: '2.5rem', borderRadius: '15px', width: '280px', flexShrink: 0}}>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.7', marginBottom: '1rem'}}>"Preparazione perfetta per le gare. Grazie al team per il supporto!"</p>
+              <p style={{fontSize: '1rem', fontWeight: '600', color: '#2980b9'}}>- Marco L.</p>
             </div>
           </div>
         </div>
