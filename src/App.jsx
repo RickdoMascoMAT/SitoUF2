@@ -7,6 +7,7 @@ import './App.css'
 function App() {
   const [selectedPlan, setSelectedPlan] = useState('base');
   const [selectedDuration, setSelectedDuration] = useState('1');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const prices = {
     base: 29,
@@ -32,12 +33,17 @@ function App() {
           <img src={logo} className="logo" alt="Gym Logo" />
           <h1 className="logo-text">IronRhino</h1>
         </div>
-        <nav>
+        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav className={menuOpen ? 'active' : ''}>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Servizi</a></li>
-            <li><a href="#about">Chi Siamo</a></li>
-            <li><a href="#contact">Contatto</a></li>
+            <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
+            <li><a href="#services" onClick={() => setMenuOpen(false)}>Servizi</a></li>
+            <li><a href="#about" onClick={() => setMenuOpen(false)}>Chi Siamo</a></li>
+            <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contatto</a></li>
           </ul>
         </nav>
       </header>
