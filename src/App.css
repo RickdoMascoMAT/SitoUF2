@@ -14,6 +14,14 @@ Se vuoi usare Futura locale:
 }
 */
 
+@font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 800;  /* ExtraBold */
+    src: url('./assets/fonts/Jost-ExtraBold.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
