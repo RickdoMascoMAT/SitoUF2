@@ -1,4 +1,4 @@
-import logo from './assets/erasebg-transformed.png'
+import logo from './assets/erasebg-transformed-downscaled.png'
 import personalTrainingImg from './assets/personal-training-downscaled.png'
 import nutritionImg from './assets/nutrition-downscaled.png'
 import { useState } from 'react'

@@ -8,14 +8,16 @@ Azioni già eseguite (alla data odierna):
   - `src/assets/personal-training.jpg` (rimosso)
   - `public/fonts/Futura-Medium.woff2` (rimosso)
   - `optimize-images.js` (rimosso)
+  - `src/assets/erasebg-transformed.png` (rimosso)
+  - `src/assets/hero-bg.jpg` (rimosso)
 - Aggiornato `package.json` rimuovendo `@types/react` e `@types/react-dom` e `sharp` dai `devDependencies`.
 - Rimosso la cartella `dist/` (build output) dal repository locale e aggiunta regola in `.gitignore`.
 
 File/Asset rimasti non rimossi (usati dall'app):
+- src/assets/erasebg-transformed-downscaled.png
+- src/assets/hero-bg-downscaled.png
 - src/assets/nutrition-downscaled.png
 - src/assets/personal-training-downscaled.png
-- src/assets/erasebg-transformed.png
-- src/assets/hero-bg.jpg
 - public/vite.svg
 
 Note su dipendenze:
