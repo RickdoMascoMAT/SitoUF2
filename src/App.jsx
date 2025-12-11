@@ -11,6 +11,7 @@ import Signup from './components/Signup'
 import Testimonials from './components/Testimonials'
 import Social from './components/Social'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [selectedPlan, setSelectedPlan] = useState('base');
@@ -50,6 +51,7 @@ function App() {
       <Testimonials />
       <Social />
       <Footer />
+      <ScrollToTop />
     </>
   )
 }
