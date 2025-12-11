@@ -1,3 +1,5 @@
+import { FaInstagram, FaYoutube } from 'react-icons/fa';
+
 export default function Footer() {
   return (
     <footer id="contact" className="footer">
@@ -10,6 +12,16 @@ export default function Footer() {
         <button type="submit" className="btn">Invia</button>
       </form>
       <p>info@ironrhino.it | Tel: 123-456-7890</p>
+
+      <div className="social-links">
+        <a href="https://www.instagram.com/_ironrhino_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <FaInstagram />
+        </a>
+        <a href="https://www.youtube.com/@ironrhino2025" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <FaYoutube />
+        </a>
+      </div>
+
       <p>&copy; 2025 IronRhino. Tutti i diritti riservati.</p>
     </footer>
   )

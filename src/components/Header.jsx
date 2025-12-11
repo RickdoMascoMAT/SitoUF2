@@ -1,3 +1,5 @@
+import { FaInstagram, FaYoutube } from 'react-icons/fa';
+
 export default function Header({ logo, menuOpen, setMenuOpen }) {
   return (
     <header>
@@ -18,6 +20,14 @@ export default function Header({ logo, menuOpen, setMenuOpen }) {
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contatto</a></li>
         </ul>
       </nav>
+      <div className="header-social-links">
+        <a href="https://www.instagram.com/ironrhino" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <FaInstagram />
+        </a>
+        <a href="https://www.youtube.com/@ironrhino" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <FaYoutube />
+        </a>
+      </div>
     </header>
   )
 }

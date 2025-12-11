@@ -227,6 +227,48 @@ nav a:hover::after {
   width: 100%;
 }
 
+.header-social-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.header-social-links a {
+  color: white;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(41, 128, 185, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-social-links a:hover {
+  transform: translateY(-3px) scale(1.1);
+  color: #2980b9;
+  background: rgba(41, 128, 185, 0.3);
+  box-shadow: 0 5px 20px rgba(41, 128, 185, 0.5);
+  border-color: rgba(41, 128, 185, 0.5);
+}
+
+.header-social-links a[aria-label="YouTube"]:hover {
+  color: #dc3545;
+  background: rgba(220, 53, 69, 0.2);
+  box-shadow: 0 5px 20px rgba(220, 53, 69, 0.5);
+  border-color: rgba(220, 53, 69, 0.5);
+}
+
+.header-social-links a[aria-label="Instagram"]:hover {
+  color: #e1306c;
+  background: rgba(225, 48, 108, 0.2);
+  box-shadow: 0 5px 20px rgba(225, 48, 108, 0.5);
+  border-color: rgba(225, 48, 108, 0.5);
+}
+
 .hero {
   text-align: center;
   padding: 4rem 0;
@@ -859,6 +901,46 @@ nav a:hover::after {
   margin-bottom: 2rem;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.social-links a {
+  color: white;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(41, 128, 185, 0.2), rgba(220, 53, 69, 0.2));
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: #2980b9;
+  background: linear-gradient(135deg, rgba(41, 128, 185, 0.4), rgba(220, 53, 69, 0.4));
+  box-shadow: 0 10px 30px rgba(41, 128, 185, 0.6), 0 5px 15px rgba(220, 53, 69, 0.4);
+  border-color: rgba(41, 128, 185, 0.5);
+}
+
+.social-links a[aria-label="YouTube"]:hover {
+  color: #dc3545;
+  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.8), 0 5px 15px rgba(220, 53, 69, 0.4);
+}
+
+.social-links a[aria-label="Instagram"]:hover {
+  color: #e1306c;
+  background: linear-gradient(135deg, rgba(225, 48, 108, 0.3), rgba(253, 29, 29, 0.2));
+  box-shadow: 0 10px 30px rgba(225, 48, 108, 0.6), 0 5px 15px rgba(253, 29, 29, 0.3);
+}
+
 /* Media Queries per Mobile */
 @media (max-width: 768px) {
   body {
@@ -873,6 +955,10 @@ nav a:hover::after {
 
   .hamburger {
     display: flex;
+  }
+
+  .header-social-links {
+    display: none;
   }
 
   nav {
