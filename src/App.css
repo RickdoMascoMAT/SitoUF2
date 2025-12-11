@@ -1398,7 +1398,7 @@ nav a:hover::after {
 .mobile-nav-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.6rem;
   background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
   color: white;
@@ -1453,6 +1453,12 @@ nav a:hover::after {
   background: linear-gradient(135deg, #2980b9 0%, #1a5a8a 100%);
   box-shadow: 0 6px 20px rgba(41, 128, 185, 0.4),
               0 0 0 0 rgba(41, 128, 185, 0.5);
+  flex-direction: row;
+}
+
+.prev-btn span {
+  text-align: left;
+  flex: 1;
 }
 
 .prev-btn:hover {
@@ -1461,7 +1467,12 @@ nav a:hover::after {
 }
 
 .next-btn {
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.next-btn span {
+  text-align: right;
+  flex: 1;
 }
 
 .mobile-nav-btn svg {
@@ -1490,7 +1501,6 @@ nav a:hover::after {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 700;
   line-height: 1.2;
-  text-align: center;
   max-width: 100%;
 }
 
