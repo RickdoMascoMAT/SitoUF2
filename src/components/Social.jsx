@@ -16,14 +16,10 @@ export default function Social() {
             <h3>Instagram</h3>
           </div>
           <p>
-            Seguici su Instagram per rimanere aggiornato sui nostri <strong>eventi</strong>,
-            sfide fitness, trasformazioni dei nostri clienti e molto altro!
+            📸 Seguici su Instagram per rimanere aggiornato sui nostri <strong>eventi</strong>,
+            sfide fitness, trasformazioni dei nostri clienti e aggiornamenti quotidiani!
+            Scopri le nostre foto, storie e molto altro direttamente sul nostro profilo.
           </p>
-          <div className="instagram-cta">
-            <p className="instagram-text">
-              📸 Scopri le nostre foto, storie e aggiornamenti quotidiani direttamente su Instagram!
-            </p>
-          </div>
           <a
             href="https://www.instagram.com/_ironrhino_"
             target="_blank"

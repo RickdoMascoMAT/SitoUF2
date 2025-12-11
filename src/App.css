@@ -1070,31 +1070,9 @@ nav a:hover::after {
   align-items: center;
 }
 
-.instagram-cta {
-  margin: 2rem auto;
-  padding: 2rem;
-  background: linear-gradient(135deg, rgba(225, 48, 108, 0.1), rgba(253, 29, 29, 0.05));
-  border-radius: 15px;
-  border: 2px solid rgba(225, 48, 108, 0.3);
-  transition: all 0.3s ease;
-}
-
-.instagram-cta:hover {
-  border-color: rgba(225, 48, 108, 0.6);
-  box-shadow: 0 5px 20px rgba(225, 48, 108, 0.3);
-}
-
-.instagram-text {
-  font-size: 1.2rem;
-  color: #e0e0e0;
-  margin: 0;
-  line-height: 1.8;
-  text-align: center;
-}
-
 .youtube-videos {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin: 2rem 0;
 }
@@ -1422,12 +1400,9 @@ nav a:hover::after {
     min-height: 300px;
   }
 
-  .instagram-cta {
-    padding: 1.5rem;
-  }
-
-  .instagram-text {
-    font-size: 1rem;
+  .youtube-videos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .video-container h4 {
