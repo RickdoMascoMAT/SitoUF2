@@ -6,6 +6,7 @@ import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import MobilePageNav from './components/MobilePageNav'
 
 // Pages
 import Home from './pages/Home'
@@ -29,6 +30,7 @@ function App() {
         <Route path="/social" element={<MediaPage />} />
         <Route path="/contatti" element={<ContactPage />} />
       </Routes>
+      <MobilePageNav />
       <Footer />
       <ScrollToTop />
     </Router>

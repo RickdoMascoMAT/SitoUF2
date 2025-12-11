@@ -1372,6 +1372,63 @@ nav a:hover::after {
   font-weight: 700;
 }
 
+/* Mobile Page Navigation */
+.mobile-page-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(180deg, #111 0%, #000 100%);
+  border-top: 2px solid rgba(41, 128, 185, 0.3);
+  gap: 1rem;
+}
+
+.mobile-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #2980b9 0%, #1a5a8a 100%);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3);
+  flex: 1;
+  max-width: 48%;
+}
+
+.mobile-nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(41, 128, 185, 0.5);
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.mobile-nav-btn:active {
+  transform: translateY(-1px);
+}
+
+.prev-btn {
+  justify-content: flex-start;
+}
+
+.next-btn {
+  justify-content: flex-end;
+}
+
+.mobile-nav-btn svg {
+  font-size: 1.2rem;
+}
+
+.mobile-nav-btn span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Media Queries per Mobile */
 @media (max-width: 768px) {
   body {
@@ -1767,6 +1824,10 @@ nav a:hover::after {
 
   .info-item p {
     font-size: 1rem;
+  }
+
+  .mobile-page-nav {
+    display: flex;
   }
 }
 
