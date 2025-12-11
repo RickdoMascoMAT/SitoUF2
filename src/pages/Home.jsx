@@ -14,15 +14,15 @@ export default function Home() {
           </p>
           <div className="home-features">
             <div className="feature-box">
-              <h3>💪 Personal Training</h3>
+              <h3>Personal Training</h3>
               <p>Allenamenti personalizzati con trainer certificati</p>
             </div>
             <div className="feature-box">
-              <h3>🥗 Nutrizione</h3>
+              <h3>Nutrizione</h3>
               <p>Piani alimentari studiati per le tue esigenze</p>
             </div>
             <div className="feature-box">
-              <h3>🏆 Risultati Garantiti</h3>
+              <h3>Risultati Garantiti</h3>
               <p>Metodologie testate e comprovate</p>
             </div>
           </div>
