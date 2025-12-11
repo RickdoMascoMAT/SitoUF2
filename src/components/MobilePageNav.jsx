@@ -11,7 +11,7 @@ export default function MobilePageNav() {
     { path: '/abbonamenti', name: 'Prezzi' },
     { path: '/chi-siamo', name: 'About' },
     { path: '/social', name: 'Social' },
-    { path: '/contatti', name: 'Contatti' }
+    { path: '/contatti', name: 'Info' }
   ];
 
   const currentIndex = pages.findIndex(page => page.path === location.pathname);
