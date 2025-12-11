@@ -1399,13 +1399,13 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
   background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
   color: white;
   border: none;
-  padding: 1.2rem 1.8rem;
+  padding: 1rem 1.5rem;
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1415,9 +1415,9 @@ nav a:hover::after {
   max-width: 48%;
   position: relative;
   overflow: hidden;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
-  font-size: 0.95rem;
+  min-height: 50px;
 }
 
 .mobile-nav-btn::before {
@@ -1485,13 +1485,13 @@ nav a:hover::after {
 }
 
 .mobile-nav-btn span {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   position: relative;
   z-index: 1;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 100%;
 }
 
 @keyframes pulse-glow {

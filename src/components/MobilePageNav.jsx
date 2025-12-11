@@ -8,8 +8,8 @@ export default function MobilePageNav() {
   const pages = [
     { path: '/', name: 'Home' },
     { path: '/servizi', name: 'Servizi' },
-    { path: '/abbonamenti', name: 'Abbonamenti' },
-    { path: '/chi-siamo', name: 'Chi Siamo' },
+    { path: '/abbonamenti', name: 'Prezzi' },
+    { path: '/chi-siamo', name: 'About' },
     { path: '/social', name: 'Social' },
     { path: '/contatti', name: 'Contatti' }
   ];
