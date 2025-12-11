@@ -1,11 +1,16 @@
+import { Link } from 'react-router-dom';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export default function Header({ logo, menuOpen, setMenuOpen }) {
   return (
     <header>
       <div className="logo-container">
-        <img src={logo} className="logo" alt="Gym Logo" />
-        <h1 className="logo-text">IronRhino</h1>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          <img src={logo} className="logo" alt="Gym Logo" />
+        </Link>
+        <Link to="/" onClick={() => setMenuOpen(false)} style={{ textDecoration: 'none' }}>
+          <h1 className="logo-text">IronRhino</h1>
+        </Link>
       </div>
       <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
         <span></span>
@@ -14,11 +19,12 @@ export default function Header({ logo, menuOpen, setMenuOpen }) {
       </button>
       <nav className={menuOpen ? 'active' : ''}>
         <ul>
-          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a href="#services" onClick={() => setMenuOpen(false)}>Servizi</a></li>
-          <li><a href="#about" onClick={() => setMenuOpen(false)}>Chi Siamo</a></li>
-          <li><a href="#social" onClick={() => setMenuOpen(false)}>Social</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contatto</a></li>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/servizi" onClick={() => setMenuOpen(false)}>Servizi</Link></li>
+          <li><Link to="/abbonamenti" onClick={() => setMenuOpen(false)}>Abbonamenti</Link></li>
+          <li><Link to="/chi-siamo" onClick={() => setMenuOpen(false)}>Chi Siamo</Link></li>
+          <li><Link to="/social" onClick={() => setMenuOpen(false)}>Social</Link></li>
+          <li><Link to="/contatti" onClick={() => setMenuOpen(false)}>Contatti</Link></li>
         </ul>
       </nav>
       <div className="header-social-links">

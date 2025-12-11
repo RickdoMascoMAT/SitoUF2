@@ -1,58 +1,41 @@
 import logo from './assets/erasebg-transformed-downscaled.png'
-import personalTrainingImg from './assets/personal-training-downscaled.png'
-import nutritionImg from './assets/nutrition-downscaled.png'
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import Header from './components/Header'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import Signup from './components/Signup'
-import Testimonials from './components/Testimonials'
-import Social from './components/Social'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 
+// Pages
+import Home from './pages/Home'
+import ServicesPage from './pages/ServicesPage'
+import PricingPage from './pages/PricingPage'
+import AboutPage from './pages/AboutPage'
+import MediaPage from './pages/MediaPage'
+import ContactPage from './pages/ContactPage'
+
 function App() {
-  const [selectedPlan, setSelectedPlan] = useState('base');
-  const [selectedDuration, setSelectedDuration] = useState('1');
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const prices = {
-    base: 29,
-    premium: 59,
-    competizione: 99
-  };
-
-  const discounts = {
-    1: 0,
-    3: 0.1,
-    6: 0.2,
-    12: 0.3
-  };
-
-  const basePrice = prices[selectedPlan];
-  const discount = discounts[selectedDuration];
-  const discountedPrice = basePrice * (1 - discount);
-
   return (
-    <>
+    <Router>
       <Header logo={logo} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Hero />
-      <Services personalTrainingImg={personalTrainingImg} nutritionImg={nutritionImg} />
-      <Signup
-        selectedPlan={selectedPlan}
-        setSelectedPlan={setSelectedPlan}
-        selectedDuration={selectedDuration}
-        setSelectedDuration={setSelectedDuration}
-        discountedPrice={discountedPrice}
-        basePrice={basePrice}
-      />
-      <Testimonials />
-      <Social />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/servizi" element={<ServicesPage />} />
+        <Route path="/abbonamenti" element={<PricingPage />} />
+        <Route path="/chi-siamo" element={<AboutPage />} />
+        <Route path="/social" element={<MediaPage />} />
+        <Route path="/contatti" element={<ContactPage />} />
+      </Routes>
       <Footer />
       <ScrollToTop />
-    </>
+    </Router>
+  )
+}
+
+export default App
   )
 }
 
