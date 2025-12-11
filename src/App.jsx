@@ -9,6 +9,7 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import Signup from './components/Signup'
 import Testimonials from './components/Testimonials'
+import Social from './components/Social'
 import Footer from './components/Footer'
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         basePrice={basePrice}
       />
       <Testimonials />
+      <Social />
       <Footer />
     </>
   )

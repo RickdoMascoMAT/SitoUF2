@@ -17,6 +17,7 @@ export default function Header({ logo, menuOpen, setMenuOpen }) {
           <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
           <li><a href="#services" onClick={() => setMenuOpen(false)}>Servizi</a></li>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>Chi Siamo</a></li>
+          <li><a href="#social" onClick={() => setMenuOpen(false)}>Social</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contatto</a></li>
         </ul>
       </nav>
