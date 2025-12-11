@@ -1,0 +1,73 @@
+name: Build and deploy to user site
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          echo "Build directory contents:"
+          ls -la dist/
+
+      - name: Deploy to GitHub Pages repository
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          # Configure git
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Clone the target repository
+          TARGET_REPO="https://x-access-token:${DEPLOY_TOKEN}@github.com/RickdoMascoMAT/rickdomascomat.github.io.git"
+          TMPDIR=$(mktemp -d)
+          
+          echo "Cloning target repository..."
+          git clone --depth 1 "$TARGET_REPO" "$TMPDIR"
+          
+          # Clear old content (keep .git directory)
+          echo "Clearing old content..."
+          find "$TMPDIR" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          
+          # Copy new build files
+          echo "Copying new build files..."
+          cp -r dist/* "$TMPDIR/"
+          
+          # Add .nojekyll to bypass Jekyll processing on GitHub Pages
+          touch "$TMPDIR/.nojekyll"
+          
+          # Commit and push changes
+          cd "$TMPDIR"
+          git add -A
+          
+          if git diff --staged --quiet; then
+            echo "No changes to deploy"
+          else
+            git commit -m "🚀 Deploy from SitoUF2 - $GITHUB_SHA"
+            echo "Pushing changes..."
+            git push origin main
+            echo "✅ Deployment successful!"
+          fi
+
