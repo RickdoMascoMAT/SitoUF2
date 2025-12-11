@@ -1494,6 +1494,11 @@ nav a:hover::after {
   max-width: 100%;
 }
 
+.mobile-nav-placeholder {
+  flex: 1;
+  max-width: 48%;
+}
+
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);

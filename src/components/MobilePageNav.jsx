@@ -20,7 +20,7 @@ export default function MobilePageNav() {
 
   return (
     <div className="mobile-page-nav">
-      {prevPage && (
+      {prevPage ? (
         <button
           className="mobile-nav-btn prev-btn"
           onClick={() => navigate(prevPage.path)}
@@ -29,8 +29,10 @@ export default function MobilePageNav() {
           <FaChevronLeft />
           <span>{prevPage.name}</span>
         </button>
+      ) : (
+        <div className="mobile-nav-placeholder"></div>
       )}
-      {nextPage && (
+      {nextPage ? (
         <button
           className="mobile-nav-btn next-btn"
           onClick={() => navigate(nextPage.path)}
@@ -39,6 +41,8 @@ export default function MobilePageNav() {
           <span>{nextPage.name}</span>
           <FaChevronRight />
         </button>
+      ) : (
+        <div className="mobile-nav-placeholder"></div>
       )}
     </div>
   );
