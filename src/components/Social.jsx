@@ -24,7 +24,7 @@ export default function Social() {
             <blockquote
               className="instagram-media"
               data-instgrm-captioned
-              data-instgrm-permalink="https://www.instagram.com/p/ESEMPIO/?utm_source=ig_embed&amp;utm_campaign=loading"
+              data-instgrm-permalink="https://www.instagram.com/_ironrhino_/p/DSFoXL-iEe_/"
               data-instgrm-version="14"
               style={{
                 background: '#FFF',
@@ -40,7 +40,7 @@ export default function Social() {
             >
               <div style={{ padding: '16px' }}>
                 <a
-                  href="https://www.instagram.com/ironrhino"
+                  href="https://www.instagram.com/_ironrhino_"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -82,7 +82,7 @@ export default function Social() {
             </blockquote>
           </div>
           <a
-            href="https://www.instagram.com/ironrhino"
+            href="https://www.instagram.com/_ironrhino_"
             target="_blank"
             rel="noopener noreferrer"
             className="btn social-btn"
@@ -103,13 +103,13 @@ export default function Social() {
           </p>
 
           <div className="youtube-videos">
-            {/* Video 1 - Sostituisci VIDEO_ID_1 con l'ID del tuo video */}
+            {/* Video 1 - Tutorial Esercizi */}
             <div className="video-container">
               <h4>Tutorial Esercizi</h4>
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                src="https://www.youtube.com/embed/mP8vKg-9Dbk"
                 title="Tutorial Esercizi IronRhino"
                 style={{ border: 0 }}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -117,13 +117,13 @@ export default function Social() {
               ></iframe>
             </div>
 
-            {/* Video 2 - Sostituisci VIDEO_ID_2 con l'ID del tuo video */}
+            {/* Video 2 - Ricette Fitness */}
             <div className="video-container">
               <h4>Ricette Fitness</h4>
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                src="https://www.youtube.com/embed/bYucvY7RTZM"
                 title="Ricette Fitness IronRhino"
                 style={{ border: 0 }}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -133,7 +133,7 @@ export default function Social() {
           </div>
 
           <a
-            href="https://www.youtube.com/@ironrhino"
+            href="https://www.youtube.com/@ironrhino2025"
             target="_blank"
             rel="noopener noreferrer"
             className="btn social-btn"

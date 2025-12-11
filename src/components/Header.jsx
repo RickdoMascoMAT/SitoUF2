@@ -22,10 +22,10 @@ export default function Header({ logo, menuOpen, setMenuOpen }) {
         </ul>
       </nav>
       <div className="header-social-links">
-        <a href="https://www.instagram.com/ironrhino" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/_ironrhino_" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <FaInstagram />
         </a>
-        <a href="https://www.youtube.com/@ironrhino" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <a href="https://www.youtube.com/@ironrhino2025" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
           <FaYoutube />
         </a>
       </div>
