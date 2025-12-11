@@ -778,6 +778,10 @@ nav a:hover::after {
   margin: 0 auto;
 }
 
+.form-field {
+  position: relative;
+}
+
 .signup-form input, .signup-form select {
   padding: 1.3rem;
   border: 2px solid rgba(41, 128, 185, 0.3);
@@ -787,6 +791,75 @@ nav a:hover::after {
   color: white;
   transition: all 0.3s;
   font-weight: 400;
+  width: 100%;
+}
+
+.signup-form textarea.notes-textarea {
+  padding: 1.3rem;
+  border: 2px solid rgba(41, 128, 185, 0.3);
+  border-radius: 10px;
+  font-size: 1.05rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s;
+  font-weight: 400;
+  font-family: 'Poppins', 'Century Gothic', 'Futura', 'Trebuchet MS', sans-serif;
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.signup-form textarea.notes-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.signup-form textarea.notes-textarea:focus {
+  outline: none;
+  border-color: #2980b9;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.5), 0 0 5px rgba(220, 53, 69, 0.3);
+}
+
+.signup-form textarea.notes-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-form input.error, .signup-form select.error {
+  border-color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: block;
+  font-weight: 500;
+}
+
+.success-message {
+  background: linear-gradient(135deg, rgba(41, 128, 185, 0.2), rgba(41, 128, 185, 0.1));
+  border: 2px solid #2980b9;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  animation: slideInDown 0.5s ease-out;
+  box-shadow: 0 5px 20px rgba(41, 128, 185, 0.3);
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .signup-form input:focus, .signup-form select:focus {
@@ -794,6 +867,22 @@ nav a:hover::after {
   border-color: #2980b9;
   background-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 0 10px rgba(41, 128, 185, 0.5), 0 0 5px rgba(220, 53, 69, 0.3);
+}
+
+.signup-form input:disabled, .signup-form select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.signup-form button:disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
 }
 
 .signup-form input::placeholder {
@@ -810,10 +899,42 @@ nav a:hover::after {
 }
 
 .contact-form input, .contact-form textarea {
-  padding: 1rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  padding: 1.3rem;
+  border: 2px solid rgba(41, 128, 185, 0.3);
+  border-radius: 10px;
+  font-size: 1.05rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s;
+  font-weight: 400;
+  font-family: 'Poppins', 'Century Gothic', 'Futura', 'Trebuchet MS', sans-serif;
+  width: 100%;
+}
+
+.contact-form input.error, .contact-form textarea.error {
+  border-color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: #2980b9;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.5), 0 0 5px rgba(220, 53, 69, 0.3);
+}
+
+.contact-form input:disabled, .contact-form textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 .signup-form label {
@@ -827,6 +948,42 @@ nav a:hover::after {
   font-weight: 400;
 }
 
+.signup-form label.free-trial-checkbox {
+  background: linear-gradient(135deg, rgba(41, 128, 185, 0.2), rgba(220, 53, 69, 0.2));
+  border: 2px solid rgba(41, 128, 185, 0.5);
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+  animation: pulse-glow-soft 2s ease-in-out infinite;
+}
+
+.signup-form label.free-trial-checkbox:hover {
+  background: linear-gradient(135deg, rgba(41, 128, 185, 0.3), rgba(220, 53, 69, 0.3));
+  border-color: rgba(220, 53, 69, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.3);
+}
+
+@keyframes pulse-glow-soft {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(41, 128, 185, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.3);
+  }
+}
+
+.signup-form label.free-trial-checkbox span {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.signup-form label.free-trial-checkbox strong {
+  color: #dc3545;
+  font-weight: 700;
+}
+
 .signup-form label input[type="checkbox"] {
   width: 18px;
   height: 18px;
@@ -837,10 +994,6 @@ nav a:hover::after {
 .signup-form button, .contact-form button {
   align-self: center;
   margin-top: 1rem;
-}
-
-.contact-form textarea {
-  resize: vertical;
 }
 
 
@@ -1203,10 +1356,13 @@ nav a:hover::after {
 
 .feature-box {
   background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 15px;
   border: 2px solid rgba(41, 128, 185, 0.3);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .feature-box:hover {
@@ -1227,6 +1383,65 @@ nav a:hover::after {
   color: #e0e0e0;
   margin: 0;
   line-height: 1.6;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.why-choose-us::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #2980b9 50%, transparent 100%);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.benefit-item {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+  border: 2px solid rgba(220, 53, 69, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(220, 53, 69, 0.8);
+  box-shadow: 0 15px 40px rgba(220, 53, 69, 0.4);
+}
+
+.benefit-item h3 {
+  font-size: 1.6rem;
+  color: #2980b9;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin: 0;
+  line-height: 1.7;
 }
 
 /* About Page Styles */
@@ -1305,6 +1520,133 @@ nav a:hover::after {
   font-size: 1.1rem;
   color: #e0e0e0;
   margin: 0;
+}
+
+/* Free Trial Section */
+.free-trial-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #000 50%, #0a0a0a 100%);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.free-trial-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #2980b9 25%, #dc3545 75%, transparent 100%);
+}
+
+.free-trial-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(41, 128, 185, 0.15) 0%, rgba(220, 53, 69, 0.15) 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 2px solid rgba(41, 128, 185, 0.4);
+  box-shadow: 0 15px 50px rgba(41, 128, 185, 0.3);
+  text-align: center;
+  position: relative;
+  animation: pulse-border 3s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(41, 128, 185, 0.4);
+    box-shadow: 0 15px 50px rgba(41, 128, 185, 0.3);
+  }
+  50% {
+    border-color: rgba(220, 53, 69, 0.4);
+    box-shadow: 0 15px 50px rgba(220, 53, 69, 0.3);
+  }
+}
+
+.free-trial-icon {
+  font-size: 4rem;
+  color: #dc3545;
+  margin-bottom: 1rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.free-trial-container h2 {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(41, 128, 185, 0.6);
+  font-weight: 700;
+}
+
+.free-trial-subtitle {
+  font-size: 1.3rem;
+  color: #e5e5e5;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.free-trial-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.free-trial-benefits .benefit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.2rem;
+  border-radius: 10px;
+  border-left: 4px solid #2980b9;
+  transition: all 0.3s ease;
+}
+
+.free-trial-benefits .benefit:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateX(5px);
+  border-left-color: #dc3545;
+}
+
+.free-trial-benefits .benefit svg {
+  color: #2980b9;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.free-trial-benefits .benefit span {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.free-trial-note {
+  background: rgba(220, 53, 69, 0.15);
+  border: 2px solid rgba(220, 53, 69, 0.4);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2.5rem;
+  font-size: 1.05rem;
+  color: #e5e5e5;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.free-trial-note strong {
+  color: #dc3545;
+  font-weight: 600;
 }
 
 /* Contact Page Styles */
@@ -1466,8 +1808,7 @@ nav a:hover::after {
 }
 
 .next-btn {
-  flex-direction: row-reverse;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 .next-btn span {
@@ -1887,6 +2228,61 @@ nav a:hover::after {
 
   .feature-box h3 {
     font-size: 1.5rem;
+  }
+
+  .why-choose-us {
+    padding: 3rem 1rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefit-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .benefit-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .free-trial-section {
+    padding: 3rem 1rem;
+  }
+
+  .free-trial-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .free-trial-icon {
+    font-size: 3rem;
+  }
+
+  .free-trial-container h2 {
+    font-size: 2rem;
+  }
+
+  .free-trial-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .free-trial-benefits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .free-trial-benefits .benefit {
+    padding: 1rem;
+  }
+
+  .free-trial-benefits .benefit span {
+    font-size: 1rem;
+  }
+
+  .free-trial-note {
+    padding: 1rem;
+    font-size: 0.95rem;
   }
 
   .about-content {

@@ -1,16 +1,16 @@
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer id="contact" className="footer">
       <h2>Contattaci</h2>
-      <form className="contact-form">
-        <input type="text" placeholder="Nome" required />
-        <input type="email" placeholder="Email" />
-        <input type="tel" placeholder="Telefono" />
-        <textarea placeholder="Messaggio" rows="4"></textarea>
-        <button type="submit" className="btn">Invia</button>
-      </form>
+      <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: '#e5e5e5' }}>
+        Hai domande o vuoi maggiori informazioni? Siamo qui per aiutarti!
+      </p>
+      <Link to="/contatti" className="btn" style={{ marginBottom: '2rem' }}>
+        Vai alla Pagina Contatti
+      </Link>
       <p>info@ironrhino.it | Tel: 123-456-7890</p>
 
       <div className="social-links">
