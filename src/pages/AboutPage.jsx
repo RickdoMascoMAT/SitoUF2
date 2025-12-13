@@ -1,3 +1,5 @@
+import Counter from '../components/Counter'
+
 export default function AboutPage() {
   return (
     <div className="page-container">
@@ -39,15 +41,15 @@ export default function AboutPage() {
 
         <div className="stats-section">
           <div className="stat-box">
-            <h3>500+</h3>
+            <Counter target="500" suffix="+" />
             <p>Clienti Soddisfatti</p>
           </div>
           <div className="stat-box">
-            <h3>10+</h3>
+            <Counter target="10" suffix="+" />
             <p>Anni di Esperienza</p>
           </div>
           <div className="stat-box">
-            <h3>95%</h3>
+            <Counter target="95" suffix="%" />
             <p>Obiettivi Raggiunti</p>
           </div>
         </div>
